@@ -1,0 +1,67 @@
+body {
+  border-radius: 8px;
+  border: 1px solid #dfe1e5;
+  margin: 200px;
+  padding: 80px;
+}
+
+h1 {
+  text-align: left;
+  display: inline;
+}
+h4,
+h2,
+h3 {
+  display: inline;
+  text-align: left;
+  font-size: 30px;
+  margin: 10px;
+}
+
+#sixdays {
+  display: block;
+}
+
+a {
+  font-size: 30px;
+  text-align: right;
+  color: white;
+}
+
+a:hover {
+  color: rgb(8, 22, 83);
+}
+
+.owner {
+  font-size: 15px;
+}
+
+.container {
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+#humidityElement,
+#precipitationElement {
+  display: block;
+  font-weight: bold;
+  text-align: right;
+}
+
+.form {
+  text-align: center;
+}
+.col-sm {
+  display: inline-block;
+  text-align: left;
+  padding: 15px;
+}
+
+#info {
+  float: right;
+  font-size: 40px;
+}
+
+i {
+  font-size: 20px;
+  color: #f7e712;
+  margin-bottom: 35px;
+}
