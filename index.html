@@ -1,126 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
+  <head>
     <title>MY PROJECT WEATHER APP</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
-        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/9e02d2bade.js" ;crossorigin="anonymous" ;></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/9e02d2bade.js"
+      ;crossorigin="anonymous"
+      ;
+    ></script>
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <div class="container">
-        <div class="col">
+      <div class="col">
+        <form class="form">
+          <div class="form-group mx-sm-3 mb-2">
+            <input type="text" id="newCity" placeholder="Enter a city..." />
+            <button type="submit" class="btn btn-primary mb-2">Search</button>
+            <button id="currentLocationButton">Current Location</button>
+          </div>
+        </form>
 
-            <form class="form">
-                <div class="form-group mx-sm-3 mb-2">
-                    <input type="text" id="newCity" placeholder="Enter a city..." />
-                    <button type="submit" class="btn btn-primary mb-2"> Search</button>
-                    <button id="currentLocationButton">Current Location</button>
-                </div>
-            </form>
+        <div class="row">
+          <div class="todayWeather">
+            <h1 id="localisation"></h1>
+            <br />
+            <h4></h4>
 
-
-            <div class="row">
-                <div class="todayWeather">
-
-                    <h1 id="localisation">LONDON</h1>
-                    <br>
-                    <h4></h4>
-
-
-                    <div class="clearfix">
-                        <div style="float: left;">
-                            <h2 id="temperature">4 </h2>
-                        </div>
-                        <div style="float: left;">
-
-                            <a href="#" id="celsius"> °C </a>|<a href="#" id="fahrenheit"> °F</a>
-                        </div>
-                    </div>
-
-                    <br>
-
-                    <div class="clearfix">
-                        <div style="float: left;/* display: block; */padding-left: 400px;text-align: center;padding-right: 100px;">    
-                                    <br>
-                                   <h3 id=" weatherDescription">
-                            </h3>
-                            <i id="info" class="fas fa-cloud-rain"></i>
-                        </div>
-                        <div style="float: right;">
-                            <div class="col"> Wind: <span id="windElement"></span> km/h</div>
-                            <div class="col"> Humidity: <span id="humidityElement"></span>%</div>
-                        </div>
-                    </div>
-
-
-                    <br>
-
-
-
-
-
-                    <br>
-
-                    <div id="sixDays" class="row" style="padding-left: 150px" ;>
-
-                        <div class="col-sm">
-                            Mond.
-                            <p> 23°C </p>
-                            <i class="fas fa-cloud-rain"></i>
-                        </div>
-
-
-                        <div class="col-sm">
-                            Tues.
-                            <p> 3°C </p>
-                            <i class="far fa-sun"></i>
-                        </div>
-
-                        <div class="col-sm">
-                            Wed.
-                            <p> 23°C </p>
-                            <i class="fas fa-cloud-rain"></i>
-                        </div>
-
-
-                        <div class="col-sm">
-                            Thur.
-                            <p> 3°C </p>
-                            <i class="far fa-sun"></i>
-                        </div>
-
-
-                        <div class="col-sm">
-                            Frid.
-                            <p> 23°C </p>
-                            <i class="fas fa-cloud-rain"></i>
-                        </div>
-
-
-                        <div class="col-sm">
-                            Sat.
-                            <p> 3°C </p>
-                            <i class="far fa-sun"></i>
-                        </div>
-
-
-                    </div>
-
-                </div>
+            <div class="clearfix">
+              <div style="float: left;">
+                <h2 id="temperature"></h2>
+                <a href="#" id="celsius"> °C </a>|<a href="#" id="fahrenheit">
+                  °F</a
+                >
+              </div>
             </div>
-            This project was code by Lesly KULUKI A KANDA and is <a class="owner"
-                href="https://github.com/LeslyKULUKI/My-first-weather-app">open-sourced on Github</a> and <a
-                class="owner" href="https://lee-is-an-angel.netlify.app/">hosted on netlify</a>.
-            <script src="script.js"></script>
-</body>
+          </div>
 
+          <div class="clearfix">
+            <div style="float: right;/* display: block; */padding-left:
+            400px;text-align: center;padding-right: 100px;"">
+            <h3 id=" weatherDescription"></h3>
+            <img src="#" alt="Clear" id="emojiWeather" />
+
+            <div class="col-6">
+              <ul>
+                <li>Wind:<span id="windElement"></span>km</li>
+                <br />
+                <li>Humidity:<span id="humidityElement"></span>%</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <br />
+
+        <br />
+
+        <br />
+
+        <div id="sixDays" class="row" style="padding-left: 150px;" ;>
+          <div class="col-sm">
+            Mond.
+            <p>23°C</p>
+            <i class="fas fa-cloud-rain"></i>
+          </div>
+
+          <div class="col-sm">
+            Tues.
+            <p>3°C</p>
+            <i class="far fa-sun"></i>
+          </div>
+
+          <div class="col-sm">
+            Wed.
+            <p>23°C</p>
+            <i class="fas fa-cloud-rain"></i>
+          </div>
+
+          <div class="col-sm">
+            Thur.
+            <p>3°C</p>
+            <i class="far fa-sun"></i>
+          </div>
+
+          <div class="col-sm">
+            Frid.
+            <p>23°C</p>
+            <i class="fas fa-cloud-rain"></i>
+          </div>
+
+          <div class="col-sm">
+            Sat.
+            <p>3°C</p>
+            <i class="far fa-sun"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    This project was code by Lesly KULUKI A KANDA and is
+    <a class="owner" href="https://github.com/LeslyKULUKI/My-first-weather-app"
+      >open-sourced on Github</a
+    >
+    and
+    <a class="owner" href="https://lee-is-an-angel.netlify.app/"
+      >hosted on netlify</a
+    >.
+    <script src="script.js"></script>
+  </body>
 </html>
