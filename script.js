@@ -196,11 +196,11 @@ function showForecast(response) {
                                                     .weather[0].icon
                                                 }@2x.png"
                                               />
-                                                          <p><strong>${Math.round(
-                                                            response.data
-                                                              .list[3].main
-                                                              .temp_max
-                                                          )}°c</strong> <em>${Math.round(
+                                                           <p><strong>${Math.round(
+                                                             response.data
+                                                               .list[3].main
+                                                               .temp_max
+                                                           )}°c</strong> <em>${Math.round(
     response.data.list[3].main.temp_min
   )}°c</em> </p>
                                               </div>
@@ -228,7 +228,7 @@ function showForecast(response) {
                                                                                 .list[4]
                                                                                 .main
                                                                                 .temp_max
-                                                                            )}°c</strong> <em>${Math.round(
+                                                                            )}°c </strong><em>${Math.round(
     response.data.list[4].main.temp_min
   )}°c</em> </p>
                                                                 </div>
