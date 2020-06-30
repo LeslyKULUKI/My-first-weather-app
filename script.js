@@ -273,7 +273,8 @@ function search(city) {
   let newCityElement = document.querySelector("#newCity");
   newCityElement.value = city;
   let key = "b2875de38775a619b72b48f178e40887";
-  let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=${key}&&units=metric`;
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&&units=metric`;
   axios.get(url).then(showWeather);
 }
+
 search("Paris");
