@@ -205,63 +205,8 @@ function showForecast(response) {
                                               </div>
                                                         </div>
 
-                                                        <div class="col-sm">
-                                                        <div>
-                                                        <h3> ${formatHours(
-                                                          response.data.list[4]
-                                                            .dt * 1000
-                                                        )}</h3>
-                                                                            
-                                                                <img id="imageForecast" 
-                                                                  src="http://openweathermap.org/img/wn/${
-                                                                    response
-                                                                      .data
-                                                                      .list[4]
-                                                                      .weather[0]
-                                                                      .icon
-                                                                  }@2x.png"
-                                                                />
-                                                                            <p><strong>${Math.round(
-                                                                              response
-                                                                                .data
-                                                                                .list[4]
-                                                                                .main
-                                                                                .temp_max
-                                                                            )}°c </strong><em>${Math.round(
-    response.data.list[4].main.temp_min
-  )}°c</em> </p>
-                                                                </div>
-                                                                          </div>
-
-                                                                          <div class="col-sm">
-                                                                          <div>
-                                                                          <h3> ${formatHours(
-                                                                            response
-                                                                              .data
-                                                                              .list[5]
-                                                                              .dt *
-                                                                              1000
-                                                                          )}</h3>
-                                                                                              
-                                                                                  <img id="imageForecast" 
-                                                                                    src="http://openweathermap.org/img/wn/${
-                                                                                      response
-                                                                                        .data
-                                                                                        .list[5]
-                                                                                        .weather[0]
-                                                                                        .icon
-                                                                                    }@2x.png"
-                                                                                  />
-                                                                                              <p><strong>${Math.round(
-                                                                                                response
-                                                                                                  .data
-                                                                                                  .list[5]
-                                                                                                  .main
-                                                                                                  .temp_max
-                                                                                              )}°c</strong> <em>${Math.round(
-    response.data.list[5].main.temp_min
-  )}°c</em> </p>
-                                                                                  </div>
+                                                       
+                                                                           </div>
                                                                                             </div>
 
                                                                                                                               
