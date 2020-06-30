@@ -39,10 +39,9 @@ function formatHours(timestamp) {
 ////////// changer la ville
 
 function changeCity(event) {
+  event.preventDefault();
   let cityInput = document.getElementById("newCity").value;
-  let key = "b2875de38775a619b72b48f178e40887";
-  let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=${key}&&units=metric`;
-  axios.get(url).then(showWeather);
+  search(cityInput);
 }
 
 let button = document.querySelector("button");
@@ -273,6 +272,8 @@ function showForecast(response) {
 function search(city) {
   let newCityElement = document.querySelector("#newCity");
   newCityElement.value = city;
-  changeCity();
+  let key = "b2875de38775a619b72b48f178e40887";
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=${key}&&units=metric`;
+  axios.get(url).then(showWeather);
 }
 search("Paris");
