@@ -66,7 +66,7 @@ function showWeather(response) {
   let emojiWeather = document.querySelector("#emojiWeather");
   emojiWeather.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   emojiWeather.setAttribute("alt", response.data.weather[0].description);
   let key = "b2875de38775a619b72b48f178e40887";
